@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "98729953590",
+    "project_id": "stadium-7620e",
+    "storage_bucket": "stadium-7620e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98729953590:android:f6211c2a858cd071ad0b97",
+        "android_client_info": {
+          "package_name": "ae.waft.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98729953590-v5ooa14puko0itdfns6h8ifggrh12p79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE3uBKhboTNxqyirLwx0I5D8vwjgK3CDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98729953590-v5ooa14puko0itdfns6h8ifggrh12p79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98729953590:android:e91949bd8844522dad0b97",
+        "android_client_info": {
+          "package_name": "com.smartlink.sport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98729953590-v5ooa14puko0itdfns6h8ifggrh12p79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE3uBKhboTNxqyirLwx0I5D8vwjgK3CDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98729953590-v5ooa14puko0itdfns6h8ifggrh12p79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
