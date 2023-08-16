@@ -14,6 +14,7 @@ import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'edit_profile_controller.dart';
 
@@ -94,7 +95,7 @@ class _EditProfileViewState extends State<EditProfileView> {
             return ReactiveForm(
               formGroup: controller.editProfileForm,
               child: ListView(
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 70),
+                padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 70),
                 children: [
                   SizedBox(
                     height: 150,
@@ -122,7 +123,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   HeaderTextField(
                     widgetState: widgetState,
                     formControlName: "name",
@@ -138,7 +139,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     },
                     textInputAction: TextInputAction.next,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   HeaderTextField(
                     widgetState: WidgetState.loading,
                     formControlName: "email",
@@ -163,7 +164,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     ),
                     textInputAction: TextInputAction.next,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   HeaderTextField(
                     widgetState: widgetState,
                     formControlName: "phone",
@@ -176,7 +177,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     },
                     textInputAction: TextInputAction.next,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   ReactiveDatePicker<DateTime>(
                     formControlName: "birthday",
                     initialEntryMode: DatePickerEntryMode.calendarOnly,
@@ -226,7 +227,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     firstDate: DateTime(DateTime.now().year - 100),
                     lastDate: DateTime(DateTime.now().year - 3),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   HeaderDropdownField<int?>(
                     items: [
                       Geder(null, LanguageKey.none.tr),
@@ -243,7 +244,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     hintText: LanguageKey.selectGender.tr,
                     header: LanguageKey.gender.tr,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                 ],
               ),
             );

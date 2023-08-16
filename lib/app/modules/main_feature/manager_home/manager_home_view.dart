@@ -68,7 +68,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                 id: "hi",
                 builder: (context) {
                   return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,
@@ -88,12 +88,12 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                 child: RefreshIndicator(
                   onRefresh: controller.refreshManagerHomeData,
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.only(bottom: 20),
+                    padding: const EdgeInsets.only(bottom: AppDimensions.generalPadding),
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     child: Column(
                       children: [
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         GetBuilder<ManagerHomeController>(
                           id: "Banners",
                           builder: (controller) {
@@ -272,7 +272,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                       );
                                     },
                                   ),
-                                  const SizedBox(height: 20),
+                                  const SizedBox(height: AppDimensions.generalPadding),
                                 ],
                               );
                             }
@@ -288,8 +288,8 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                crossAxisSpacing: 20,
-                                mainAxisSpacing: 20,
+                                crossAxisSpacing: AppDimensions.generalPadding,
+                                mainAxisSpacing: AppDimensions.generalPadding,
                               ),
                               children: [
                                 widget(
@@ -323,8 +323,8 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              crossAxisSpacing: 20,
-                              mainAxisSpacing: 20,
+                              crossAxisSpacing: AppDimensions.generalPadding,
+                              mainAxisSpacing: AppDimensions.generalPadding,
                             ),
                             itemBuilder: (context, index) {
                               return ShimmerWidget(
@@ -345,7 +345,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                           child: StateBuilder<ManagerHomeController>(
                             id: "getStatistics",
                             builder: (widgetState, controller) {
@@ -409,8 +409,8 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                                   children: [
                                                     SvgPicture.asset(
                                                       AppAssets.cart,
-                                                      width: 20,
-                                                      height: 20,
+                                                      width: AppDimensions.generalPadding,
+                                                      height: AppDimensions.generalPadding,
                                                     ),
                                                     const SizedBox(width: 5),
                                                     Text(
@@ -423,7 +423,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                                     ),
                                                   ],
                                                 ),
-                                                const SizedBox(height: 20),
+                                                const SizedBox(height: AppDimensions.generalPadding),
                                                 Text(
                                                   controller
                                                       .statistics.todayBookings
@@ -481,7 +481,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                                     ),
                                                   ],
                                                 ),
-                                                const SizedBox(height: 20),
+                                                const SizedBox(height: AppDimensions.generalPadding),
                                                 Text(
                                                   "${controller.statistics.totalAmount} ${LanguageKey.dirhams.tr}",
                                                   style: const TextStyle(

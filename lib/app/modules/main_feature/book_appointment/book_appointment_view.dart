@@ -31,7 +31,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
+        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 2),
         child: SizedBox(
           width: double.infinity,
           height: 50,
@@ -72,10 +72,10 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 80),
+        padding: const EdgeInsets.fromLTRB(0, AppDimensions.generalPadding, 0, 80),
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
             child: Text(
               LanguageKey.selectBookingType.tr,
               style: const TextStyle(
@@ -208,7 +208,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           Text(
                             LanguageKey.selectHours.tr,
                             style: const TextStyle(
@@ -216,7 +216,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           StateBuilder<BookAppointmentController>(
                             id: "getAvailableTimes",
                             builder: (widgetState, controller) {
@@ -251,7 +251,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                                             ),
                                             padding: const EdgeInsets.symmetric(
                                               vertical: 10,
-                                              horizontal: 20,
+                                              horizontal: AppDimensions.generalPadding,
                                             ),
                                             child: Text(
                                               availableTime.dateFormated,
@@ -303,7 +303,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                                         child: Container(
                                           padding: const EdgeInsets.symmetric(
                                             vertical: 10,
-                                            horizontal: 20,
+                                            horizontal: AppDimensions.generalPadding,
                                           ),
                                           decoration: BoxDecoration(
                                             borderRadius:

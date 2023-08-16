@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/core/theme/colors.dart';
 
+import '../../../app_constants/app_dimensions.dart';
 import '../services/size_configration.dart';
 
 class NoInternetConnection extends StatelessWidget {
@@ -23,7 +24,7 @@ class NoInternetConnection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: AppDimensions.generalPadding),
             Text(
               LanguageKey.noInternet.tr,
               style: const TextStyle(
@@ -32,7 +33,7 @@ class NoInternetConnection extends StatelessWidget {
                 color: AppColors.fontGray,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: AppDimensions.generalPadding),
             onRetryFunction == null
                 ? const SizedBox()
                 : OutlinedButton.icon(

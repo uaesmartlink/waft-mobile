@@ -11,6 +11,7 @@ import 'package:sport/app/modules/main_feature/manager_activities/widgets/activi
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 import 'package:sport/app_constants/app_assets.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
 import 'manager_activities_controller.dart';
 
 class ManagerActivitiesView extends GetView<ManagerActivitiesController> {
@@ -60,10 +61,10 @@ class ManagerActivitiesView extends GetView<ManagerActivitiesController> {
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     controller: scrollController,
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+                    padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
                     itemCount: controller.dataList.length,
                     separatorBuilder: (context, index) {
-                      return const SizedBox(height: 20);
+                      return const SizedBox(height: AppDimensions.generalPadding);
                     },
                     itemBuilder: (context, index) {
                       final Activity activity = controller.dataList[index];

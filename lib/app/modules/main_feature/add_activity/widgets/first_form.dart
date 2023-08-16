@@ -57,7 +57,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widgetState,
             formControlName: "email",
@@ -78,7 +78,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
             ),
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widgetState,
             formControlName: "phone",
@@ -92,7 +92,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           StateBuilder<AddActivityController>(
             id: "getCities",
             disableState: true,
@@ -123,7 +123,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
               );
             },
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           StateBuilder<AddActivityController>(
             id: "getRegions",
             disableState: true,
@@ -153,7 +153,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
               );
             },
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           StateBuilder<AddActivityController>(
             id: "getActivityTypes",
             disableState: true,
@@ -179,7 +179,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
               );
             },
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widgetState,
             formControlName: "website",
@@ -193,7 +193,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widgetState,
             formControlName: "map_url",

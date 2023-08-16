@@ -53,7 +53,7 @@ class BookingResultView extends GetView<BookingResultController> {
                         height: MediaQuery.of(context).size.width / 2,
                         child: Image.asset(AppAssets.done),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       Text(
                         LanguageKey.paymentSuccessful.tr,
                         style: const TextStyle(
@@ -120,12 +120,12 @@ class BookingResultView extends GetView<BookingResultController> {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       item(
                         firstString: LanguageKey.address.tr,
                         secondString: controller.activity.address,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       item(
                         firstString: LanguageKey.bookingDate.tr,
                         secondString:
@@ -134,19 +134,19 @@ class BookingResultView extends GetView<BookingResultController> {
                       ),
                       if (controller.package.packageType ==
                           PackageType.timeSlot) ...[
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         item(
                           firstString: LanguageKey.bookingHour.tr,
                           secondString: DateFormat.jm(Translation.languageCode)
                               .format(controller.date),
                         ),
                       ],
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       item(
                         firstString: LanguageKey.description.tr,
                         secondString: controller.package.name,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       item(
                         firstString: LanguageKey.bookingType.tr,
                         secondString: controller.package.packageType ==
@@ -154,7 +154,7 @@ class BookingResultView extends GetView<BookingResultController> {
                             ? LanguageKey.oneTimeReservation.tr
                             : LanguageKey.subscription.tr,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       item(
                         firstString: LanguageKey.price.tr,
                         secondString:

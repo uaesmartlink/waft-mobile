@@ -8,6 +8,7 @@ import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/utils/intl.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/services/size_configration.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'wrapper_controller.dart';
@@ -29,13 +30,13 @@ class WrapperView extends GetView<WrapperController> {
                   children: [
                     const Spacer(),
                     const SizedBox(height: 45),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: AppDimensions.generalPadding),
                     Image.asset(
                       AppAssets.logo,
                       width: customSize.screenWidth / 2,
                       height: customSize.screenWidth / 2,
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: AppDimensions.generalPadding),
                     if (widgetState == WidgetState.error)
                       SizedBox(
                         height: 45,
@@ -85,7 +86,7 @@ void appUpdateBottomSheet({
                 'WAFT',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppDimensions.generalPadding),
               Text(
                 LanguageKey.newVersionAvailable.tr,
                 textAlign: TextAlign.start,

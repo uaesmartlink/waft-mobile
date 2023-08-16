@@ -9,6 +9,7 @@ import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/modules/auth/auth_module.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'blocked_controller.dart';
 
@@ -65,7 +66,7 @@ class BlockedView extends GetView<BlockedController> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   SizedBox(
                     width: 150,
                     height: 40,

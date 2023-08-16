@@ -40,7 +40,7 @@ class _SecondFormAddActivityState extends State<SecondFormAddActivity> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "address_ar",
@@ -53,7 +53,7 @@ class _SecondFormAddActivityState extends State<SecondFormAddActivity> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "description_ar",

@@ -8,6 +8,7 @@ import 'package:sport/app/core/widgets/elevated_button.dart';
 import 'package:sport/app/core/widgets/input_fields.dart' hide EmailValidator;
 import 'package:sport/app/modules/auth/shared/constant/auth_routes.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'login_controller.dart';
 
@@ -67,7 +68,7 @@ class LoginView extends GetView<LoginController> {
                     },
                     textInputAction: TextInputAction.next,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   HeaderTextField(
                     widgetState: widgetState,
                     formControlName: "password",

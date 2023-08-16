@@ -7,6 +7,8 @@ import 'package:sport/app/core/services/size_configration.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class ManagerActivityItem extends StatefulWidget {
   const ManagerActivityItem({
     super.key,
@@ -127,7 +129,7 @@ class _ManagerActivityItemState extends State<ManagerActivityItem> {
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: AppDimensions.generalPadding,
                   child: Icon(
                     Icons.circle,
                     color: widget.activity.status == "Pending"

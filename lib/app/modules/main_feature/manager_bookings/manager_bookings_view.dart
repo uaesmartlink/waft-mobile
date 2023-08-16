@@ -19,6 +19,8 @@ import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart'
 import 'package:sport/app_constants/app_assets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class ManagerBookingsView extends GetView<ManagerBookingsController> {
   const ManagerBookingsView({Key? key}) : super(key: key);
   @override
@@ -141,7 +143,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
                           physics: const BouncingScrollPhysics(
                               parent: AlwaysScrollableScrollPhysics()),
                           controller: scrollController,
-                          padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+                          padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
                           itemBuilder: (context, index) {
                             final Booking booking = controller.dataList[index];
                             return Container(
@@ -179,7 +181,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
                                           ),
                                           Container(
                                             padding: const EdgeInsets.symmetric(
-                                                horizontal: 20, vertical: 8),
+                                                horizontal: AppDimensions.generalPadding, vertical: 8),
                                             decoration: BoxDecoration(
                                               color: controller.tabBarIndex == 0
                                                   ? AppColors.primary
@@ -460,7 +462,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
                             );
                           },
                           separatorBuilder: (context, index) {
-                            return const SizedBox(height: 20);
+                            return const SizedBox(height: AppDimensions.generalPadding);
                           },
                           itemCount: controller.dataList.length,
                         );
@@ -537,7 +539,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -555,7 +557,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,

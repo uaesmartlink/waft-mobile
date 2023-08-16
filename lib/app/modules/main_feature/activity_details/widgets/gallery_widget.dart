@@ -11,6 +11,8 @@ import 'package:sport/app/core/widgets/no_resulte.dart';
 import 'package:sport/app/modules/main_feature/activity_details/activity_details_controller.dart';
 import 'package:swipe_image_gallery/swipe_image_gallery.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class GalleryWidget extends GetView<ActivityDetailsController> {
   const GalleryWidget({required this.images, super.key});
   final List<ActivityImage> images;
@@ -24,7 +26,7 @@ class GalleryWidget extends GetView<ActivityDetailsController> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
         physics: const ClampingScrollPhysics(),
-        padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
+        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 100),
         itemBuilder: (context, index) {
           final ActivityImage activityImage = images[index];
           return InkWell(

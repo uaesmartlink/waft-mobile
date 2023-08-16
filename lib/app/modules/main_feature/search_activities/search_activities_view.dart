@@ -15,6 +15,7 @@ import 'package:sport/app/modules/main_feature/search_activities/search_activiti
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 
 class SearchActivitiesView extends GetView<SearchActivitiesController> {
   const SearchActivitiesView({Key? key}) : super(key: key);
@@ -129,7 +130,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                             return const SizedBox(width: 10);
                           },
                           scrollDirection: Axis.horizontal,
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                           itemCount: 6,
                           itemBuilder: (context, index) {
                             return Shimmer.fromColors(
@@ -216,7 +217,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                           physics: const BouncingScrollPhysics(
                               parent: AlwaysScrollableScrollPhysics()),
                           controller: scrollController,
-                          padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+                          padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
                           itemBuilder: (context, index) {
                             final Activity activity =
                                 controller.dataList[index];
@@ -249,7 +250,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                             );
                           },
                           separatorBuilder: (context, index) {
-                            return const SizedBox(height: 20);
+                            return const SizedBox(height: AppDimensions.generalPadding);
                           },
                           itemCount: controller.dataList.length,
                         );
@@ -274,7 +275,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
       height: 40,
       child: ListView.separated(
         itemCount: items.length,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) {
           return const SizedBox(width: 10);
@@ -333,7 +334,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -398,7 +399,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                               },
                               scrollDirection: Axis.horizontal,
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 20),
+                                  const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                               itemCount: 6,
                               itemBuilder: (context, index) {
                                 return Shimmer.fromColors(
@@ -438,11 +439,11 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const SizedBox(height: 20),
+                              const SizedBox(height: AppDimensions.generalPadding),
                               Text(
                                 LanguageKey.city.tr,
                                 style: const TextStyle(
@@ -486,7 +487,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                               },
                               scrollDirection: Axis.horizontal,
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 20),
+                                  const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                               itemCount: 6,
                               itemBuilder: (context, index) {
                                 return Shimmer.fromColors(
@@ -529,11 +530,11 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                         ),
                         if (controller.selectedCity != null) ...[
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const SizedBox(height: 20),
+                                const SizedBox(height: AppDimensions.generalPadding),
                                 Text(
                                   LanguageKey.region.tr,
                                   style: const TextStyle(
@@ -576,7 +577,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                                 },
                                 scrollDirection: Axis.horizontal,
                                 padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
+                                    const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                                 itemCount: 6,
                                 itemBuilder: (context, index) {
                                   return Shimmer.fromColors(
@@ -619,11 +620,11 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                           ),
                         ],
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const SizedBox(height: 20),
+                              const SizedBox(height: AppDimensions.generalPadding),
                               Text(
                                 LanguageKey.rating.tr,
                                 style: const TextStyle(

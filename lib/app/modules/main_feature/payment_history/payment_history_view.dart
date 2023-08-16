@@ -12,6 +12,8 @@ import 'package:sport/app/core/widgets/pagination.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/payment_history/payment_history_controller.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class PaymentHistoryView extends GetView<PaymentHistoryController> {
   const PaymentHistoryView({Key? key}) : super(key: key);
   @override
@@ -46,7 +48,7 @@ class PaymentHistoryView extends GetView<PaymentHistoryController> {
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     controller: scrollController,
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 80),
+                    padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 80),
                     itemBuilder: (context, index) {
                       final Transaction transaction =
                           controller.dataList[index];
@@ -113,7 +115,7 @@ class PaymentHistoryView extends GetView<PaymentHistoryController> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return const SizedBox(height: 20);
+                      return const SizedBox(height: AppDimensions.generalPadding);
                     },
                     itemCount: controller.dataList.length,
                   );
@@ -135,7 +137,7 @@ class PaymentHistoryView extends GetView<PaymentHistoryController> {
         if (index == 0) {
           if (transaction.createdAt.sameDay()) {
             return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
               child: Text(
                 LanguageKey.today.tr,
                 style: const TextStyle(
@@ -146,7 +148,7 @@ class PaymentHistoryView extends GetView<PaymentHistoryController> {
             );
           } else {
             return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
               child: Text(
                 DateFormat.MMMMd(Translation.languageCode)
                     .format(transaction.createdAt),
@@ -160,7 +162,7 @@ class PaymentHistoryView extends GetView<PaymentHistoryController> {
         } else if (!transaction.createdAt
             .sameDay(controller.dataList[index - 1].createdAt)) {
           return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
             child: Text(
               DateFormat.MMMMd(Translation.languageCode)
                   .format(transaction.createdAt),

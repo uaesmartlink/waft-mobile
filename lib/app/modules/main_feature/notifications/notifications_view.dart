@@ -12,6 +12,8 @@ import 'package:sport/app/core/widgets/pagination.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/notifications/notifications_controller.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class NotificationsView extends GetView<NotificationsController> {
   const NotificationsView({Key? key}) : super(key: key);
   @override
@@ -46,7 +48,7 @@ class NotificationsView extends GetView<NotificationsController> {
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     controller: scrollController,
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 80),
+                    padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 80),
                     itemBuilder: (context, index) {
                       final NotificationModel notification =
                           controller.dataList[index];
@@ -95,7 +97,7 @@ class NotificationsView extends GetView<NotificationsController> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return const SizedBox(height: 20);
+                      return const SizedBox(height: AppDimensions.generalPadding);
                     },
                     itemCount: controller.dataList.length,
                   );
@@ -117,7 +119,7 @@ class NotificationsView extends GetView<NotificationsController> {
         if (index == 0) {
           if (notification.createdAt.sameDay()) {
             return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
               child: Text(
                 LanguageKey.today.tr,
                 style: const TextStyle(
@@ -128,7 +130,7 @@ class NotificationsView extends GetView<NotificationsController> {
             );
           } else {
             return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
               child: Text(
                 DateFormat.MMMMd(Translation.languageCode)
                     .format(notification.createdAt),
@@ -142,7 +144,7 @@ class NotificationsView extends GetView<NotificationsController> {
         } else if (!notification.createdAt
             .sameDay(controller.dataList[index - 1].createdAt)) {
           return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: AppDimensions.generalPadding),
             child: Text(
               DateFormat.MMMMd(Translation.languageCode)
                   .format(notification.createdAt),

@@ -208,7 +208,7 @@ void reviewDialog({
                       Image.asset(
                         AppAssets.reviews,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       Text(
                         LanguageKey.leaveReview.tr,
                         style: const TextStyle(

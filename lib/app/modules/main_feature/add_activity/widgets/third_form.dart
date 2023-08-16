@@ -5,6 +5,8 @@ import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class ThirdFormAddActivity extends StatefulWidget {
   const ThirdFormAddActivity(
       {super.key, required this.widgetState, required this.formGroup});
@@ -21,7 +23,7 @@ class _ThirdFormAddActivityState extends State<ThirdFormAddActivity> {
     return ReactiveForm(
       formGroup: widget.formGroup,
       child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
         children: [
           HeaderTextField(
             widgetState: widget.widgetState,
@@ -35,7 +37,7 @@ class _ThirdFormAddActivityState extends State<ThirdFormAddActivity> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "address_en",
@@ -48,7 +50,7 @@ class _ThirdFormAddActivityState extends State<ThirdFormAddActivity> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "description_en",

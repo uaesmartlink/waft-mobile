@@ -8,6 +8,7 @@ import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 
 import '../../../../../app_constants/app_assets.dart';
+import '../../../../../app_constants/app_dimensions.dart';
 
 class FirstFormRegister extends StatefulWidget {
   const FirstFormRegister(
@@ -53,7 +54,7 @@ class _FirstFormRegisterState extends State<FirstFormRegister> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "email",
@@ -74,7 +75,7 @@ class _FirstFormRegisterState extends State<FirstFormRegister> {
             ),
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "password",
@@ -99,7 +100,7 @@ class _FirstFormRegisterState extends State<FirstFormRegister> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderTextField(
             widgetState: widget.widgetState,
             formControlName: "confirm_password",

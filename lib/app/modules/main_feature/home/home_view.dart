@@ -20,6 +20,7 @@ import 'package:sport/app/modules/main_feature/home/widgets/section_header.dart'
 import 'package:sport/app/modules/main_feature/profile/profile_view.dart';
 import 'package:sport/app/modules/main_feature/search_activities/search_activities_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
+import 'package:sport/app_constants/app_dimensions.dart';
 
 import '../../../../app_constants/app_assets.dart';
 import 'home_controller.dart';
@@ -86,7 +87,7 @@ class HomeView extends GetView<HomeController> {
                 id: "hi",
                 builder: (context) {
                   return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                     child: SizedBox(
                       height: 125,
                       child: Column(
@@ -99,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                               fontWeight: FontWeight.w900,
                             ),
                           ),
-                          SizedBox(height: Translation.isArabic ? 5 : 20),
+                          SizedBox(height: Translation.isArabic ? 5 : AppDimensions.generalPadding),
                           TextField(
                             readOnly: true,
                             onTap: () {
@@ -124,12 +125,12 @@ class HomeView extends GetView<HomeController> {
                 child: RefreshIndicator(
                   onRefresh: controller.refreshHomeData,
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.only(bottom: 20),
+                    padding: const EdgeInsets.only(bottom: AppDimensions.generalPadding),
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     child: Column(
                       children: [
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         GetBuilder<HomeController>(
                           id: "Banners",
                           builder: (controller) {
@@ -329,7 +330,7 @@ class HomeView extends GetView<HomeController> {
                                       );
                                     },
                                   ),
-                                  const SizedBox(height: 20),
+                                  const SizedBox(height: AppDimensions.generalPadding),
                                   const Divider(
                                     endIndent: 20,
                                     indent: 20,
@@ -395,7 +396,7 @@ class HomeView extends GetView<HomeController> {
                             );
                           },
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         StateBuilder<HomeController>(
                           id: "getMostPopular",
                           disableState: true,

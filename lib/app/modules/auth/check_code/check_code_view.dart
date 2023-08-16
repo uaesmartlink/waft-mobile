@@ -66,7 +66,7 @@ class CheckCodeView extends GetView<CheckCodeController> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppDimensions.generalPadding),
               StateBuilder<CheckCodeController>(
                   id: "checkCodeViewPinCodeTextField",
                   disableState: true,
@@ -110,7 +110,7 @@ class CheckCodeView extends GetView<CheckCodeController> {
                       ),
                     );
                   }),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppDimensions.generalPadding),
               StateBuilder<CheckCodeController>(
                   id: "checkCodeViewTimer",
                   disableState: true,

@@ -12,6 +12,8 @@ import 'package:sport/app/modules/main_feature/favorites/favorites_controller.da
 import 'package:sport/app/modules/main_feature/home/widgets/section_header.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class FavoritesView extends GetView<FavoritesController> {
   const FavoritesView({Key? key}) : super(key: key);
   @override
@@ -46,7 +48,7 @@ class FavoritesView extends GetView<FavoritesController> {
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     controller: scrollController,
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+                    padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
                     itemBuilder: (context, index) {
                       final Activity activity = controller.dataList[index];
                       return InkWell(
@@ -76,7 +78,7 @@ class FavoritesView extends GetView<FavoritesController> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return const SizedBox(height: 20);
+                      return const SizedBox(height: AppDimensions.generalPadding);
                     },
                     itemCount: controller.dataList.length,
                   );
@@ -98,7 +100,7 @@ class FavoritesView extends GetView<FavoritesController> {
       height: 40,
       child: ListView.separated(
         itemCount: items.length,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) {
           return const SizedBox(width: 10);

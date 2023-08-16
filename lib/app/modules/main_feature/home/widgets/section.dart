@@ -9,6 +9,8 @@ import 'package:sport/app/core/widgets/no_internet.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/home/widgets/section_header.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class SectionWidget extends StatelessWidget {
   const SectionWidget({
     super.key,
@@ -50,7 +52,7 @@ class SectionWidget extends StatelessWidget {
           selectedItem: selectedHeaderItem,
           onSelectItem: onSelectHeaderItem,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: AppDimensions.generalPadding),
         if (widgetState != WidgetState.error)
           if (items.isEmpty && widgetState == WidgetState.loaded)
             SizedBox(
@@ -68,12 +70,12 @@ class SectionWidget extends StatelessWidget {
             )
           else
             ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: widgetState == WidgetState.loading ? 3 : items.length,
               separatorBuilder: (context, index) {
-                return const SizedBox(height: 20);
+                return const SizedBox(height: AppDimensions.generalPadding);
               },
               itemBuilder: (context, index) {
                 if (widgetState == WidgetState.loading) {

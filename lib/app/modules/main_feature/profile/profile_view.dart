@@ -59,7 +59,7 @@ class ProfileView extends GetView<ProfileController> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: AppDimensions.generalPadding),
                     Text(
                       DataHelper.user?.name ?? "",
                       style: const TextStyle(
@@ -178,7 +178,7 @@ class ProfileView extends GetView<ProfileController> {
                       },
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: AppDimensions.generalPadding),
                       child: TextButton(
                         onPressed: () {
                           deleteAccountDialog(
@@ -195,7 +195,7 @@ class ProfileView extends GetView<ProfileController> {
                     ),
                   ] else
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(AppDimensions.generalPadding),
                       child: SizedBox(
                         width: double.infinity,
                         height: 50,
@@ -238,7 +238,7 @@ class ProfileView extends GetView<ProfileController> {
               height: 25,
               color: color,
             ),
-            const SizedBox(width: 20),
+            const SizedBox(width: AppDimensions.generalPadding),
             Text(
               title,
               style: TextStyle(
@@ -286,7 +286,7 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 5),
+                  padding: const EdgeInsets.only(top: AppDimensions.generalPadding, bottom: 5),
                   child: Text(LanguageKey.sureLogout.tr),
                 ),
                 const SizedBox(height: 10),
@@ -362,7 +362,7 @@ class ProfileView extends GetView<ProfileController> {
                             fontSize: 20,
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         Text(
                           LanguageKey.sureDeleteAccount.tr,
                           style: const TextStyle(
@@ -372,7 +372,7 @@ class ProfileView extends GetView<ProfileController> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         TextField(
                           onTap: () {
                             if (textEditingController.selection.extent.offset ==
@@ -397,7 +397,7 @@ class ProfileView extends GetView<ProfileController> {
                             counter: const SizedBox(),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -423,7 +423,7 @@ class ProfileView extends GetView<ProfileController> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -483,7 +483,7 @@ void partnerDialog({
                           color: AppColors.primary,
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       Text(
                         LanguageKey.beWaftPartnerDescription.tr,
                         style: const TextStyle(
@@ -491,7 +491,7 @@ void partnerDialog({
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       SizedBox(
                         height: 60,
                         width: double.infinity,
@@ -513,7 +513,7 @@ void partnerDialog({
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       SizedBox(
                         height: 60,
                         width: double.infinity,

@@ -5,6 +5,8 @@ import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class SectionHeaderWidget extends StatelessWidget {
   const SectionHeaderWidget({
     super.key,
@@ -26,7 +28,7 @@ class SectionHeaderWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -58,7 +60,7 @@ class SectionHeaderWidget extends StatelessWidget {
             height: 40,
             child: ListView.separated(
               itemCount: widgetState == WidgetState.loading ? 10 : items.length,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
               scrollDirection: Axis.horizontal,
               separatorBuilder: (context, index) {
                 return const SizedBox(width: 10);

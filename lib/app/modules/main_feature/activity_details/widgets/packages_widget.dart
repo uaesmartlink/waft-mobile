@@ -133,7 +133,7 @@ class PackagesWidget extends GetView<ActivityDetailsController> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -153,7 +153,7 @@ class PackagesWidget extends GetView<ActivityDetailsController> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -261,7 +261,7 @@ void addPackageDialog({
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           HeaderTextField(
                             widgetState: widgetState,
                             formControlName: "name_ar",
@@ -275,7 +275,7 @@ void addPackageDialog({
                             },
                             textInputAction: TextInputAction.next,
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           HeaderTextField(
                             widgetState: widgetState,
                             formControlName: "name_en",
@@ -289,7 +289,7 @@ void addPackageDialog({
                             },
                             textInputAction: TextInputAction.next,
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           HeaderDropdownField<String>(
                             widgetState: widgetState,
                             formControlName: "type",
@@ -317,7 +317,7 @@ void addPackageDialog({
                                 .toList(),
                             header: LanguageKey.packageType.tr,
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           HeaderTextField(
                             widgetState: widgetState,
                             formControlName: "price",
@@ -331,7 +331,7 @@ void addPackageDialog({
                             },
                             textInputAction: TextInputAction.next,
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           Row(
                             children: [
                               Expanded(
@@ -377,7 +377,7 @@ void addPackageDialog({
                               ),
                             ],
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           SizedBox(
                             height: 60,
                             width: double.infinity,
@@ -441,7 +441,7 @@ void addPackageDialog({
                               ),
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: AppDimensions.generalPadding),
                           SizedBox(
                             height: 60,
                             width: double.infinity,

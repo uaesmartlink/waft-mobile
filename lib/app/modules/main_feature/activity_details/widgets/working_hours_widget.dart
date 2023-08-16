@@ -140,7 +140,7 @@ class WorkingHoursWidget extends GetView<ActivityDetailsController> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -160,7 +160,7 @@ class WorkingHoursWidget extends GetView<ActivityDetailsController> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -257,7 +257,7 @@ void addWorkTimeDialog({
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         HeaderDropdownField<String>(
                           widgetState: widgetState,
                           formControlName: "day",
@@ -284,7 +284,7 @@ void addWorkTimeDialog({
                               .toList(),
                           header: LanguageKey.day.tr,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         ReactiveTimePicker(
                           initialEntryMode: TimePickerEntryMode.input,
                           formControlName: "start_time",
@@ -321,7 +321,7 @@ void addWorkTimeDialog({
                             );
                           },
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         ReactiveTimePicker(
                           initialEntryMode: TimePickerEntryMode.input,
                           formControlName: "end_time",
@@ -358,7 +358,7 @@ void addWorkTimeDialog({
                             );
                           },
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -400,7 +400,7 @@ void addWorkTimeDialog({
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,

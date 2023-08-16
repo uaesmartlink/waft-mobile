@@ -121,7 +121,7 @@ class ServicesWidget extends GetView<ActivityDetailsController> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -141,7 +141,7 @@ class ServicesWidget extends GetView<ActivityDetailsController> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -212,7 +212,7 @@ void addServiceDialog({
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         StateBuilder<ActivityDetailsController>(
                           id: "getServices",
                           disableState: true,
@@ -238,7 +238,7 @@ void addServiceDialog({
                             );
                           },
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,
@@ -264,7 +264,7 @@ void addServiceDialog({
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: AppDimensions.generalPadding),
                         SizedBox(
                           height: 60,
                           width: double.infinity,

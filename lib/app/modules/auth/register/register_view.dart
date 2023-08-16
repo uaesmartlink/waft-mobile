@@ -217,7 +217,7 @@ class _RegisterViewState extends State<RegisterView> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       SizedBox(
                         height: 600,
                         child: PageView(

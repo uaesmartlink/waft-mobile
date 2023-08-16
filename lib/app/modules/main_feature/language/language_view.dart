@@ -49,7 +49,7 @@ class LanguageView extends GetView<LanguageController> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 InkWell(
                   onTap: () {
                     controller.changeSelectedLanguage('ar');

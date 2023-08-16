@@ -142,12 +142,12 @@ class ReviewSummaryController extends GetxStateController {
                         font: arabicFont,
                       ),
                     ),
-                    pw.SizedBox(height: 20),
+                    pw.SizedBox(height: AppDimensions.generalPadding),
                     summaryItem(
                       firstString: LanguageKey.address.tr,
                       secondString: activity.address,
                     ),
-                    pw.SizedBox(height: 20),
+                    pw.SizedBox(height: AppDimensions.generalPadding),
                     summaryItem(
                       firstString: LanguageKey.bookingDate.tr,
                       secondString: DateFormat.yMMMMd(Translation.languageCode)
@@ -155,19 +155,19 @@ class ReviewSummaryController extends GetxStateController {
                     ),
                     if (selectedPackage.packageType ==
                         PackageType.timeSlot) ...[
-                      pw.SizedBox(height: 20),
+                      pw.SizedBox(height: AppDimensions.generalPadding),
                       summaryItem(
                         firstString: LanguageKey.bookingHour.tr,
                         secondString: DateFormat.jm(Translation.languageCode)
                             .format(date),
                       ),
                     ],
-                    pw.SizedBox(height: 20),
+                    pw.SizedBox(height: AppDimensions.generalPadding),
                     summaryItem(
                       firstString: LanguageKey.description.tr,
                       secondString: selectedPackage.name,
                     ),
-                    pw.SizedBox(height: 20),
+                    pw.SizedBox(height: AppDimensions.generalPadding),
                     summaryItem(
                       firstString: LanguageKey.bookingType.tr,
                       secondString:
@@ -175,7 +175,7 @@ class ReviewSummaryController extends GetxStateController {
                               ? LanguageKey.oneTimeReservation.tr
                               : LanguageKey.subscription.tr,
                     ),
-                    pw.SizedBox(height: 20),
+                    pw.SizedBox(height: AppDimensions.generalPadding),
                     summaryItem(
                       firstString: LanguageKey.price.tr,
                       secondString:

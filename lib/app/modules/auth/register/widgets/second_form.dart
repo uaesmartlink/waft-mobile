@@ -12,6 +12,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../app_constants/app_assets.dart';
+import '../../../../../app_constants/app_dimensions.dart';
 
 class SecondFormRegister extends StatefulWidget {
   const SecondFormRegister({
@@ -48,7 +49,7 @@ class _SecondFormRegisterState extends State<SecondFormRegister> {
             },
             textInputAction: TextInputAction.next,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           ReactiveDatePicker<DateTime>(
             formControlName: "birthday",
             initialEntryMode: DatePickerEntryMode.calendarOnly,
@@ -98,7 +99,7 @@ class _SecondFormRegisterState extends State<SecondFormRegister> {
             firstDate: DateTime(DateTime.now().year - 100),
             lastDate: DateTime(DateTime.now().year - 3),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           HeaderDropdownField<int?>(
             items: [
               Geder(null, LanguageKey.none.tr),
@@ -115,7 +116,7 @@ class _SecondFormRegisterState extends State<SecondFormRegister> {
             hintText: LanguageKey.selectGender.tr,
             header: LanguageKey.gender.tr,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: AppDimensions.generalPadding),
           Row(
             children: [
               Checkbox(

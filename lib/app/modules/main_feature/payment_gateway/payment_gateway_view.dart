@@ -6,6 +6,8 @@ import 'package:sport/app/core/widgets/no_internet.dart';
 import 'package:sport/app/modules/main_feature/payment_gateway/payment_gateway_controller.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class PaymentGatewayView extends GetView<PaymentGatewayController> {
   const PaymentGatewayView({Key? key}) : super(key: key);
   @override
@@ -15,7 +17,7 @@ class PaymentGatewayView extends GetView<PaymentGatewayController> {
         title: Text(LanguageKey.paymentGateway.tr),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
             child: GetBuilder<PaymentGatewayController>(
               id: "progress",
               builder: (controller) {
