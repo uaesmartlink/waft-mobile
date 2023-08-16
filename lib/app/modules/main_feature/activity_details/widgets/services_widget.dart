@@ -13,6 +13,8 @@ import 'package:sport/app/core/widgets/no_resulte.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/activity_details/activity_details_controller.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class ServicesWidget extends GetView<ActivityDetailsController> {
   const ServicesWidget({required this.services, super.key});
   final List<ServiceModel> services;
@@ -26,7 +28,7 @@ class ServicesWidget extends GetView<ActivityDetailsController> {
         } else {
           return ListView.separated(
             physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
+            padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 100),
             itemBuilder: (context, index) {
               ServiceModel serviceModel = services[index];
               return Container(

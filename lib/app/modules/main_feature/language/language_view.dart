@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/modules/main_feature/language/language_controller.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class LanguageView extends GetView<LanguageController> {
   const LanguageView({Key? key}) : super(key: key);
   @override
@@ -21,7 +23,7 @@ class LanguageView extends GetView<LanguageController> {
           id: "changeSelectedLanguage",
           builder: (context) {
             return ListView(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(AppDimensions.generalPadding),
               children: [
                 InkWell(
                   onTap: () {

@@ -5,13 +5,15 @@ import 'package:sport/app/core/services/size_configration.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/modules/auth/shared/constant/auth_routes.dart';
 
+import '../../../app_constants/app_dimensions.dart';
+
 void loginBottomSheet({required String description}) {
   Get.bottomSheet(
     ScreenSizer(
         constWidth: 40,
         builder: (customSize) {
           return Container(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 10),
+            padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 30, AppDimensions.generalPadding, 10),
             decoration: const BoxDecoration(
               color: AppColors.background,
               borderRadius: BorderRadius.only(
@@ -31,7 +33,7 @@ void loginBottomSheet({required String description}) {
                     fontSize: 20,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 Text(
                   description,
                   style: const TextStyle(
@@ -41,7 +43,7 @@ void loginBottomSheet({required String description}) {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

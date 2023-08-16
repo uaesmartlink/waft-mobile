@@ -5,6 +5,8 @@ import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class SecondFormAddActivity extends StatefulWidget {
   const SecondFormAddActivity({
     super.key,
@@ -24,7 +26,7 @@ class _SecondFormAddActivityState extends State<SecondFormAddActivity> {
     return ReactiveForm(
       formGroup: widget.formGroup,
       child: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(AppDimensions.generalPadding),
         children: [
           HeaderTextField(
             widgetState: widget.widgetState,

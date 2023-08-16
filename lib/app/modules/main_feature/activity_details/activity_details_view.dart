@@ -25,6 +25,7 @@ import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart'
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 
 class ActivityDetailsView extends GetView<ActivityDetailsController> {
   const ActivityDetailsView({Key? key}) : super(key: key);
@@ -81,7 +82,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(AppDimensions.generalPadding),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,7 +141,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                     SizedBox(
                       height: controller.activity.rating != null ? 260 : 230,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 0),
                         child: Column(
                           children: [
                             Row(
@@ -199,7 +200,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                 ],
                               ),
                             ],
-                            SizedBox(height: Translation.isArabic ? 6 : 20),
+                            SizedBox(height: Translation.isArabic ? 6 : AppDimensions.generalPadding),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
@@ -435,7 +436,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
         );
       } else {
         return Padding(
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
+          padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 2),
           child: SizedBox(
             width: double.infinity,
             height: 50,

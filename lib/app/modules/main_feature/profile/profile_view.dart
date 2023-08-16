@@ -16,6 +16,7 @@ import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart'
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import 'profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -270,7 +271,7 @@ class ProfileView extends GetView<ProfileController> {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           backgroundColor: AppColors.background,
           child: Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(AppDimensions.generalPadding),
             width: MediaQuery.of(context).size.width - 100,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

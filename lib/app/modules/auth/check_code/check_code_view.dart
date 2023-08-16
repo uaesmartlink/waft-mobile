@@ -7,6 +7,7 @@ import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/elevated_button.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'check_code_controller.dart';
 
@@ -55,7 +56,7 @@ class CheckCodeView extends GetView<CheckCodeController> {
               ),
               const SizedBox(height: 15),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
                 child: Text(
                   LanguageKey.enterVerificationCode.tr,
                   style: const TextStyle(

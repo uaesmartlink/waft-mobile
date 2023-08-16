@@ -20,6 +20,8 @@ import 'package:sport/app/core/utils/logger.dart';
 import 'package:sport/app/core/widgets/app_messenger.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
+
 class ReviewSummaryController extends GetxStateController {
   final ActivitiesRepository activitiesRepository;
   late final Activity activity;
@@ -125,7 +127,7 @@ class ReviewSummaryController extends GetxStateController {
                 : pw.TextDirection.ltr,
             build: (pw.Context context) {
               return pw.Container(
-                padding: const pw.EdgeInsets.all(20),
+                padding: const pw.EdgeInsets.all(AppDimensions.generalPadding),
                 decoration: pw.BoxDecoration(
                   color: PdfColor.fromHex("ffFAFAFA"),
                   borderRadius: pw.BorderRadius.circular(15),

@@ -17,6 +17,7 @@ import 'package:sport/app/modules/main_feature/search_activities/search_activiti
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import 'manager_home_controller.dart';
 
 class ManagerHomeView extends GetView<ManagerHomeController> {
@@ -282,7 +283,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                           builder: (widgetState, controller) {
                             return GridView(
                               physics: const NeverScrollableScrollPhysics(),
-                              padding: const EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(AppDimensions.generalPadding),
                               shrinkWrap: true,
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
@@ -316,7 +317,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                           },
                           loadingView: GridView.builder(
                             physics: const NeverScrollableScrollPhysics(),
-                            padding: const EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(AppDimensions.generalPadding),
                             shrinkWrap: true,
                             itemCount: 4,
                             gridDelegate:
@@ -350,7 +351,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                             builder: (widgetState, controller) {
                               return Container(
                                 height: 200,
-                                padding: const EdgeInsets.all(20),
+                                padding: const EdgeInsets.all(AppDimensions.generalPadding),
                                 decoration: BoxDecoration(
                                   color: AppColors.background,
                                   boxShadow: [

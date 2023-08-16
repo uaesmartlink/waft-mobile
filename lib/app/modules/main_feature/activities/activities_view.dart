@@ -12,6 +12,7 @@ import 'package:sport/app/modules/main_feature/search_activities/search_activiti
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 import 'activities_controller.dart';
 
 class ActivitiesView extends GetView<ActivitiesController> {
@@ -56,7 +57,7 @@ class ActivitiesView extends GetView<ActivitiesController> {
                     physics: const BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     controller: scrollController,
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+                    padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
                     itemBuilder: (context, index) {
                       final ActivityType activityType =
                           controller.dataList[index];
@@ -95,7 +96,7 @@ class ActivitiesView extends GetView<ActivitiesController> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(AppDimensions.generalPadding),
                               child: Text(
                                 activityType.name,
                                 style: const TextStyle(

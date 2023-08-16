@@ -10,6 +10,7 @@ import 'package:sport/app/modules/main_feature/booking_result/booking_result_con
 import 'package:sport/app/modules/main_feature/home_module.dart';
 
 import '../../../../app_constants/app_assets.dart';
+import '../../../../app_constants/app_dimensions.dart';
 
 class BookingResultView extends GetView<BookingResultController> {
   const BookingResultView({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class BookingResultView extends GetView<BookingResultController> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
+        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 2),
         child: SizedBox(
           width: double.infinity,
           height: 50,
@@ -42,7 +43,7 @@ class BookingResultView extends GetView<BookingResultController> {
           onRetryFunction: controller.paymentCallback,
           builder: (widgetState, controller) {
             return ListView(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 80),
+              padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 80),
               children: [
                 if (controller.paymentResult)
                   Column(
@@ -95,9 +96,9 @@ class BookingResultView extends GetView<BookingResultController> {
                       ),
                     ],
                   ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(AppDimensions.generalPadding),
                   decoration: BoxDecoration(
                     color: AppColors.background,
                     boxShadow: [

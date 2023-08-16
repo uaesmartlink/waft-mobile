@@ -14,6 +14,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
 import 'book_appointment_controller.dart';
 
 class BookAppointmentView extends GetView<BookAppointmentController> {
@@ -89,7 +90,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                 return SizedBox(
                   height: 170,
                   child: ListView.separated(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(AppDimensions.generalPadding),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       final Package package =
@@ -100,7 +101,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                         },
                         child: Container(
                           width: 220,
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(AppDimensions.generalPadding),
                           decoration: BoxDecoration(
                             border: Border.all(
                               color:
@@ -147,14 +148,14 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return const SizedBox(width: 20);
+                      return const SizedBox(width: AppDimensions.generalPadding);
                     },
                     itemCount: controller.activity.packages.length,
                   ),
                 );
               }),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.generalPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -165,7 +166,7 @@ class BookAppointmentView extends GetView<BookAppointmentController> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(

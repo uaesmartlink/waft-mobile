@@ -11,6 +11,7 @@ import 'package:sport/app/core/widgets/input_fields.dart' hide EmailValidator;
 import 'package:sport/app/modules/auth/register/widgets/first_form.dart';
 import 'package:sport/app/modules/auth/register/widgets/second_form.dart';
 
+import '../../../../app_constants/app_dimensions.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'register_controller.dart';
 
@@ -187,7 +188,7 @@ class _RegisterViewState extends State<RegisterView> {
                 constHeight: 150,
                 builder: (CustomSize customSize) {
                   return ListView(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(AppDimensions.generalPadding),
                     children: [
                       SizedBox(
                         height: 150,

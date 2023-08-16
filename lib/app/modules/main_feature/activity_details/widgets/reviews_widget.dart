@@ -16,6 +16,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/activity_details/activity_details_controller.dart';
 
 import '../../../../../app_constants/app_assets.dart';
+import '../../../../../app_constants/app_dimensions.dart';
 
 class ReviewsWidget extends GetView<ActivityDetailsController> {
   const ReviewsWidget({this.seeAll = false, super.key});
@@ -74,7 +75,7 @@ class ReviewsWidget extends GetView<ActivityDetailsController> {
             builder: (scrollController) {
               return ListView.separated(
                 physics: const ClampingScrollPhysics(),
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
+                padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 100),
                 controller: scrollController,
                 itemBuilder: (context, index) {
                   if (index == 0 && !seeAll) {
@@ -217,7 +218,7 @@ void reviewDialog({
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       RatingBar.builder(
                         initialRating: rating,
                         minRating: 1,
@@ -235,7 +236,7 @@ void reviewDialog({
                           rating = newRating;
                         },
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       TextField(
                         maxLines: 2,
                         readOnly: widgetState == WidgetState.loading,
@@ -260,7 +261,7 @@ void reviewDialog({
                           counter: const SizedBox(),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       SizedBox(
                         height: 60,
                         width: double.infinity,
@@ -282,7 +283,7 @@ void reviewDialog({
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppDimensions.generalPadding),
                       SizedBox(
                         height: 60,
                         width: double.infinity,

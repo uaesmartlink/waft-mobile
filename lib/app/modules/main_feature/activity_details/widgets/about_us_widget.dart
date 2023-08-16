@@ -4,6 +4,8 @@ import 'package:sport/app/core/localization/language_key.dart';
 import 'package:sport/app/core/models/worktime_model.dart';
 import 'package:sport/app/core/theme/colors.dart';
 
+import '../../../../../app_constants/app_dimensions.dart';
+
 class AboutUsWidget extends StatelessWidget {
   const AboutUsWidget({
     super.key,
@@ -16,7 +18,7 @@ class AboutUsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       physics: const ClampingScrollPhysics(),
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
+      padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, AppDimensions.generalPadding, AppDimensions.generalPadding, 100),
       children: [
         Text(
           LanguageKey.workingHours.tr,
@@ -63,7 +65,7 @@ class AboutUsWidget extends StatelessWidget {
               ),
             ],
           ),
-        const SizedBox(height: 20),
+        const SizedBox(height: AppDimensions.generalPadding),
         Text(
           LanguageKey.aboutUs.tr,
           style: const TextStyle(

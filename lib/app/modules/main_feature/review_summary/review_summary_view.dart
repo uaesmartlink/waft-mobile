@@ -8,6 +8,7 @@ import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/elevated_button.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/review_summary/review_summary_controller.dart';
+import 'package:sport/app_constants/app_dimensions.dart';
 
 class ReviewSummaryView extends GetView<ReviewSummaryController> {
   const ReviewSummaryView({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class ReviewSummaryView extends GetView<ReviewSummaryController> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 2),
+        padding: const EdgeInsets.fromLTRB(AppDimensions.generalPadding, 0, AppDimensions.generalPadding, 2),
         child: StateBuilder<ReviewSummaryController>(
             id: "bookStadium",
             disableState: true,
@@ -53,10 +54,10 @@ class ReviewSummaryView extends GetView<ReviewSummaryController> {
             }),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(AppDimensions.generalPadding),
         children: [
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(AppDimensions.generalPadding),
             decoration: BoxDecoration(
               color: AppColors.background,
               boxShadow: [
@@ -78,12 +79,12 @@ class ReviewSummaryView extends GetView<ReviewSummaryController> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 item(
                   firstString: LanguageKey.address.tr,
                   secondString: controller.activity.address,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 item(
                   firstString: LanguageKey.bookingDate.tr,
                   secondString: DateFormat.yMMMMd(Translation.languageCode)
@@ -91,19 +92,19 @@ class ReviewSummaryView extends GetView<ReviewSummaryController> {
                 ),
                 if (controller.selectedPackage.packageType ==
                     PackageType.timeSlot) ...[
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppDimensions.generalPadding),
                   item(
                     firstString: LanguageKey.bookingHour.tr,
                     secondString: DateFormat.jm(Translation.languageCode)
                         .format(controller.date),
                   ),
                 ],
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 item(
                   firstString: LanguageKey.description.tr,
                   secondString: controller.selectedPackage.name,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 item(
                   firstString: LanguageKey.bookingType.tr,
                   secondString: controller.selectedPackage.packageType ==
@@ -111,7 +112,7 @@ class ReviewSummaryView extends GetView<ReviewSummaryController> {
                       ? LanguageKey.oneTimeReservation.tr
                       : LanguageKey.subscription.tr,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: AppDimensions.generalPadding),
                 item(
                   firstString: LanguageKey.price.tr,
                   secondString:

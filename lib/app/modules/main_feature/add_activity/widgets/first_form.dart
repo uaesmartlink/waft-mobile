@@ -9,6 +9,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/add_activity/add_activity_controller.dart';
 
 import '../../../../../app_constants/app_assets.dart';
+import '../../../../../app_constants/app_dimensions.dart';
 
 class FirstFormAddActivity extends GetView<AddActivityController> {
   const FirstFormAddActivity(
@@ -21,7 +22,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
     return ReactiveForm(
       formGroup: formGroup,
       child: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(AppDimensions.generalPadding),
         children: [
           SizedBox(
             height: 150,
