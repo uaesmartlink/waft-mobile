@@ -15,6 +15,8 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/bookings/bookings_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
+
 class BookingsView extends GetView<BookingsController> {
   const BookingsView({Key? key}) : super(key: key);
   @override
@@ -27,7 +29,7 @@ class BookingsView extends GetView<BookingsController> {
           leading: Padding(
             padding: const EdgeInsets.all(5),
             child: Image.asset(
-              "assets/images/logo.png",
+              AppAssets.logo,
             ),
           ),
           title: Text(

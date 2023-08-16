@@ -11,6 +11,8 @@ import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../app_constants/app_assets.dart';
+
 class SecondFormRegister extends StatefulWidget {
   const SecondFormRegister({
     super.key,
@@ -79,7 +81,7 @@ class _SecondFormRegisterState extends State<SecondFormRegister> {
                         height: 40,
                         child: Center(
                           child: SvgPicture.asset(
-                            "assets/images/Calendar.svg",
+                            AppAssets.calendar,
                             width: 30,
                             height: 30,
                           ),

@@ -21,6 +21,7 @@ import 'package:sport/app/modules/main_feature/profile/profile_view.dart';
 import 'package:sport/app/modules/main_feature/search_activities/search_activities_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import 'home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -35,7 +36,7 @@ class HomeView extends GetView<HomeController> {
           leading: Padding(
             padding: const EdgeInsets.all(5),
             child: Image.asset(
-              "assets/images/logo.png",
+              AppAssets.logo,
             ),
           ),
           title: const Text(
@@ -53,7 +54,7 @@ class HomeView extends GetView<HomeController> {
                 }
               },
               icon: SvgPicture.asset(
-                "assets/images/Notifications.svg",
+                AppAssets.notifications,
                 width: 25,
                 height: 25,
               ),
@@ -68,7 +69,7 @@ class HomeView extends GetView<HomeController> {
                 }
               },
               icon: SvgPicture.asset(
-                "assets/images/Saved_border.svg",
+                AppAssets.bookMarkOutlined,
                 width: 25,
                 height: 25,
               ),

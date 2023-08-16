@@ -14,6 +14,8 @@ import 'package:sport/app/modules/main_feature/home/widgets/section_header.dart'
 import 'package:sport/app/modules/main_feature/search_activities/search_activities_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
+
 class SearchActivitiesView extends GetView<SearchActivitiesController> {
   const SearchActivitiesView({Key? key}) : super(key: key);
   @override
@@ -71,7 +73,7 @@ class SearchActivitiesView extends GetView<SearchActivitiesController> {
                             height: 40,
                             child: Center(
                               child: SvgPicture.asset(
-                                "assets/images/Filter.svg",
+                                AppAssets.filter,
                                 width: 20,
                                 height: 20,
                               ),

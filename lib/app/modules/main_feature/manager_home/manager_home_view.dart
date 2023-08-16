@@ -16,6 +16,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/search_activities/search_activities_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import 'manager_home_controller.dart';
 
 class ManagerHomeView extends GetView<ManagerHomeController> {
@@ -30,7 +31,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
           leading: Padding(
             padding: const EdgeInsets.all(5),
             child: Image.asset(
-              "assets/images/logo.png",
+              AppAssets.logo,
             ),
           ),
           title: const Text(
@@ -48,7 +49,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                 }
               },
               icon: SvgPicture.asset(
-                "assets/images/Notifications.svg",
+                AppAssets.notifications,
                 width: 25,
                 height: 25,
               ),
@@ -406,7 +407,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                                       MainAxisAlignment.start,
                                                   children: [
                                                     SvgPicture.asset(
-                                                      "assets/images/bookings.svg",
+                                                      AppAssets.cart,
                                                       width: 20,
                                                       height: 20,
                                                     ),
@@ -473,7 +474,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
                                                     ),
                                                     const SizedBox(width: 5),
                                                     SvgPicture.asset(
-                                                      "assets/images/amount.svg",
+                                                      AppAssets.amount,
                                                       width: 20,
                                                       height: 20,
                                                     ),
@@ -594,7 +595,7 @@ class ManagerHomeView extends GetView<ManagerHomeController> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SvgPicture.asset(
-            "assets/images/mony.svg",
+            AppAssets.money,
             width: 50,
             height: 50,
           ),

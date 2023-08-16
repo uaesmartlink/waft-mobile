@@ -7,6 +7,8 @@ import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 
+import '../../../../../app_constants/app_assets.dart';
+
 class FirstFormRegister extends StatefulWidget {
   const FirstFormRegister(
       {super.key, required this.widgetState, required this.formGroup});
@@ -65,7 +67,7 @@ class _FirstFormRegisterState extends State<FirstFormRegister> {
             },
             suffixIcon: Center(
               child: SvgPicture.asset(
-                "assets/images/Message.svg",
+                AppAssets.message,
                 width: 30,
                 height: 30,
               ),

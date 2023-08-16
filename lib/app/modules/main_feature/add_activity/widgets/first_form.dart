@@ -8,6 +8,8 @@ import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/add_activity/add_activity_controller.dart';
 
+import '../../../../../app_constants/app_assets.dart';
+
 class FirstFormAddActivity extends GetView<AddActivityController> {
   const FirstFormAddActivity(
       {super.key, required this.widgetState, required this.formGroup});
@@ -68,7 +70,7 @@ class FirstFormAddActivity extends GetView<AddActivityController> {
             },
             suffixIcon: Center(
               child: SvgPicture.asset(
-                "assets/images/Message.svg",
+                AppAssets.message,
                 width: 30,
                 height: 30,
               ),

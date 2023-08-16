@@ -15,6 +15,7 @@ import 'package:sport/app/modules/auth/shared/constant/auth_routes.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import 'profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -27,7 +28,7 @@ class ProfileView extends GetView<ProfileController> {
         leading: Padding(
           padding: const EdgeInsets.all(5),
           child: Image.asset(
-            "assets/images/logo.png",
+            AppAssets.logo,
           ),
         ),
         title: Text(
@@ -77,7 +78,7 @@ class ProfileView extends GetView<ProfileController> {
                     const SizedBox(height: 5),
                   ],
                   item(
-                    assetName: "assets/images/Star.svg",
+                    assetName: AppAssets.star,
                     title: DataHelper.user?.role == AccountType.manager
                         ? DataHelper.user?.browsingType == AccountType.user
                             ? LanguageKey.backToPartnerMode.tr
@@ -103,29 +104,29 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                   if (DataHelper.logedIn) ...[
                     item(
-                      assetName: "assets/images/Profile.svg",
+                      assetName: AppAssets.profile,
                       title: LanguageKey.editProfile.tr,
                       route: HomeRoutes.editProfileRoute,
                     ),
                     item(
-                      assetName: "assets/images/Notifications.svg",
+                      assetName: AppAssets.notifications,
                       title: LanguageKey.notifications.tr,
                       route: HomeRoutes.notificationsRoute,
                     ),
                     if (DataHelper.user!.browsingType == AccountType.user)
                       item(
-                        assetName: "assets/images/Payment.svg",
+                        assetName: AppAssets.payment,
                         title: LanguageKey.paymentHistory.tr,
                         route: HomeRoutes.paymentHistoryRoute,
                       ),
                   ],
                   item(
-                    assetName: "assets/images/Language.svg",
+                    assetName: AppAssets.language,
                     title: LanguageKey.language.tr,
                     route: HomeRoutes.languageRoute,
                   ),
                   item(
-                    assetName: "assets/images/Privacy Policy.svg",
+                    assetName: AppAssets.privacyPolicy,
                     title: LanguageKey.privacyPolicy.tr,
                     onTap: () async {
                       launchUrl(
@@ -135,7 +136,7 @@ class ProfileView extends GetView<ProfileController> {
                     },
                   ),
                   item(
-                    assetName: "assets/images/Shield Done.svg",
+                    assetName: AppAssets.shieldDone,
                     title: LanguageKey.termsOfUse.tr,
                     onTap: () async {
                       launchUrl(
@@ -146,7 +147,7 @@ class ProfileView extends GetView<ProfileController> {
                     },
                   ),
                   item(
-                    assetName: "assets/images/Danger Circle.svg",
+                    assetName: AppAssets.dangerCircle,
                     title: LanguageKey.aboutUs.tr,
                     onTap: () async {
                       launchUrl(
@@ -156,7 +157,7 @@ class ProfileView extends GetView<ProfileController> {
                     },
                   ),
                   item(
-                    assetName: "assets/images/Share.svg",
+                    assetName: AppAssets.share,
                     title: LanguageKey.shareApp.tr,
                     onTap: () {
                       Share.share(
@@ -165,7 +166,7 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                   if (DataHelper.logedIn) ...[
                     item(
-                      assetName: "assets/images/Logout.svg",
+                      assetName: AppAssets.logout,
                       title: LanguageKey.logout.tr,
                       color: AppColors.red,
                       onTap: () {

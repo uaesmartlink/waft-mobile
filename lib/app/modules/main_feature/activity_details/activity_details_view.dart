@@ -24,6 +24,8 @@ import 'package:sport/app/modules/main_feature/activity_details/widgets/working_
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../app_constants/app_assets.dart';
+
 class ActivityDetailsView extends GetView<ActivityDetailsController> {
   const ActivityDetailsView({Key? key}) : super(key: key);
   @override
@@ -108,7 +110,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                               child: InkWell(
                                                 onTap: controller.toggelSaved,
                                                 child: SvgPicture.asset(
-                                                  "assets/images/Saved_solid.svg",
+                                                  AppAssets.bookMarkFilled,
                                                   width: 25,
                                                   height: 25,
                                                 ),
@@ -120,7 +122,7 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                               child: InkWell(
                                                 onTap: controller.toggelSaved,
                                                 child: SvgPicture.asset(
-                                                  "assets/images/Saved_border.svg",
+                                                  AppAssets.bookMarkOutlined,
                                                   width: 25,
                                                   height: 25,
                                                   color: AppColors.background,

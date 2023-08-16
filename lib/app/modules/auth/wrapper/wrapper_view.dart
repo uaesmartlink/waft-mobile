@@ -7,6 +7,7 @@ import 'package:sport/app/core/models/constants_model.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/utils/intl.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import '../../../core/services/size_configration.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'wrapper_controller.dart';
@@ -30,7 +31,7 @@ class WrapperView extends GetView<WrapperController> {
                     const SizedBox(height: 45),
                     const SizedBox(height: 20),
                     Image.asset(
-                      "assets/images/logo.png",
+                      AppAssets.logo,
                       width: customSize.screenWidth / 2,
                       height: customSize.screenWidth / 2,
                     ),

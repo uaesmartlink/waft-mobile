@@ -11,6 +11,7 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/search_activities/search_activities_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import 'activities_controller.dart';
 
 class ActivitiesView extends GetView<ActivitiesController> {
@@ -25,7 +26,7 @@ class ActivitiesView extends GetView<ActivitiesController> {
           leading: Padding(
             padding: const EdgeInsets.all(5),
             child: Image.asset(
-              "assets/images/logo.png",
+              AppAssets.logo,
             ),
           ),
           title: Text(

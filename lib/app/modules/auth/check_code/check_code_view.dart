@@ -6,6 +6,7 @@ import 'package:sport/app/core/services/size_configration.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/elevated_button.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'check_code_controller.dart';
 
@@ -43,7 +44,7 @@ class CheckCodeView extends GetView<CheckCodeController> {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/Frame.png",
+                AppAssets.frame,
                 width: customSize.screenWidth / 1.6,
                 height: customSize.screenWidth / 1.6,
               ),

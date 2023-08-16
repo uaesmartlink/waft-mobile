@@ -16,6 +16,7 @@ import 'package:sport/app/core/widgets/pagination.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/manager_bookings/manager_bookings_controller.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
+import 'package:sport/app_constants/app_assets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ManagerBookingsView extends GetView<ManagerBookingsController> {
@@ -30,7 +31,7 @@ class ManagerBookingsView extends GetView<ManagerBookingsController> {
           leading: Padding(
             padding: const EdgeInsets.all(5),
             child: Image.asset(
-              "assets/images/logo.png",
+              AppAssets.logo,
             ),
           ),
           title: Text(

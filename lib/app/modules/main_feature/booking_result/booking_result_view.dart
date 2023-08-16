@@ -9,6 +9,8 @@ import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/booking_result/booking_result_controller.dart';
 import 'package:sport/app/modules/main_feature/home_module.dart';
 
+import '../../../../app_constants/app_assets.dart';
+
 class BookingResultView extends GetView<BookingResultController> {
   const BookingResultView({Key? key}) : super(key: key);
   @override
@@ -48,7 +50,7 @@ class BookingResultView extends GetView<BookingResultController> {
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 2,
                         height: MediaQuery.of(context).size.width / 2,
-                        child: Image.asset("assets/images/done.png"),
+                        child: Image.asset(AppAssets.done),
                       ),
                       const SizedBox(height: 20),
                       Text(

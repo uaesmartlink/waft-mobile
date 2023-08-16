@@ -13,6 +13,7 @@ import 'package:sport/app/core/widgets/elevated_button.dart';
 import 'package:sport/app/core/widgets/input_fields.dart';
 import 'package:sport/app/modules/main_feature/shared/constant/home_routes.dart';
 
+import '../../../../app_constants/app_assets.dart';
 import '../../../core/widgets/widget_state.dart';
 import 'edit_profile_controller.dart';
 
@@ -155,7 +156,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                     },
                     suffixIcon: Center(
                       child: SvgPicture.asset(
-                        "assets/images/Message.svg",
+                        AppAssets.message,
                         width: 30,
                         height: 30,
                       ),
@@ -208,7 +209,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                                 height: 40,
                                 child: Center(
                                   child: SvgPicture.asset(
-                                    "assets/images/Calendar.svg",
+                                    AppAssets.calendar,
                                     width: 30,
                                     height: 30,
                                   ),

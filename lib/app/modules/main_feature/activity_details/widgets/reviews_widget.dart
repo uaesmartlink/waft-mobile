@@ -15,6 +15,8 @@ import 'package:sport/app/core/widgets/pagination.dart';
 import 'package:sport/app/core/widgets/widget_state.dart';
 import 'package:sport/app/modules/main_feature/activity_details/activity_details_controller.dart';
 
+import '../../../../../app_constants/app_assets.dart';
+
 class ReviewsWidget extends GetView<ActivityDetailsController> {
   const ReviewsWidget({this.seeAll = false, super.key});
   final bool seeAll;
@@ -203,7 +205,7 @@ void reviewDialog({
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Image.asset(
-                        "assets/images/review.png",
+                        AppAssets.reviews,
                       ),
                       const SizedBox(height: 20),
                       Text(

@@ -9,6 +9,8 @@ import 'package:sport/app/core/services/size_configration.dart';
 import 'package:sport/app/core/theme/colors.dart';
 import 'package:sport/app/core/widgets/go_login.dart';
 
+import '../../../app_constants/app_assets.dart';
+
 class ActivityItem extends StatefulWidget {
   const ActivityItem({
     super.key,
@@ -172,7 +174,7 @@ class _ActivityItemState extends State<ActivityItem> {
                           }
                         },
                         child: SvgPicture.asset(
-                          "assets/images/Saved_solid.svg",
+                          AppAssets.bookMarkFilled,
                           width: 25,
                           height: 25,
                         ),
@@ -192,7 +194,7 @@ class _ActivityItemState extends State<ActivityItem> {
                           }
                         },
                         child: SvgPicture.asset(
-                          "assets/images/Saved_border.svg",
+                          AppAssets.bookMarkOutlined,
                           width: 25,
                           height: 25,
                         ),
