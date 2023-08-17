@@ -106,30 +106,30 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                     builder: (controller) {
                                       return controller.saved
                                           ? SizedBox(
-                                              width: 25,
-                                              height: 25,
-                                              child: InkWell(
-                                                onTap: controller.toggelSaved,
-                                                child: SvgPicture.asset(
-                                                  AppAssets.bookMarkFilled,
-                                                  width: 25,
-                                                  height: 25,
-                                                ),
-                                              ),
-                                            )
+                                        width: 25,
+                                        height: 25,
+                                        child: InkWell(
+                                          onTap: controller.toggelSaved,
+                                          child: SvgPicture.asset(
+                                            AppAssets.bookMarkFilled,
+                                            width: 25,
+                                            height: 25,
+                                          ),
+                                        ),
+                                      )
                                           : SizedBox(
-                                              width: 25,
-                                              height: 25,
-                                              child: InkWell(
-                                                onTap: controller.toggelSaved,
-                                                child: SvgPicture.asset(
-                                                  AppAssets.bookMarkOutlined,
-                                                  width: 25,
-                                                  height: 25,
-                                                  color: AppColors.background,
-                                                ),
-                                              ),
-                                            );
+                                        width: 25,
+                                        height: 25,
+                                        child: InkWell(
+                                          onTap: controller.toggelSaved,
+                                          child: SvgPicture.asset(
+                                            AppAssets.bookMarkOutlined,
+                                            width: 25,
+                                            height: 25,
+                                            color: AppColors.background,
+                                          ),
+                                        ),
+                                      );
                                     },
                                   ),
                               ],
@@ -185,8 +185,8 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                     controller.activity.rating! < 2
                                         ? Icons.star_border_rounded
                                         : controller.activity.rating == 5
-                                            ? Icons.star_rounded
-                                            : Icons.star_half_rounded,
+                                        ? Icons.star_rounded
+                                        : Icons.star_half_rounded,
                                     color: AppColors.primary,
                                   ),
                                   const SizedBox(width: 5),
@@ -250,60 +250,60 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                         onTap: controller.changeSelectedTabBarIndex,
                         labelPadding: const EdgeInsets.symmetric(horizontal: 5),
                         tabs: DataHelper.user?.browsingType ==
-                                AccountType.manager
+                            AccountType.manager
                             ? [
-                                tabBarItem(
-                                  selected: controller.tabBarIndex == 0,
-                                  title: LanguageKey.aboutUs.tr,
-                                ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 5,
-                                  title: LanguageKey.services.tr,
-                                ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 4,
-                                  title: LanguageKey.packages.tr,
-                                ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 3,
-                                  title: LanguageKey.workingHours.tr,
-                                ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 2,
-                                  title: LanguageKey.gallery.tr,
-                                ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 1,
-                                  title: LanguageKey.reviews.tr,
-                                ),
-                              ]
+                          tabBarItem(
+                            selected: controller.tabBarIndex == 0,
+                            title: LanguageKey.aboutUs.tr,
+                          ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 5,
+                            title: LanguageKey.services.tr,
+                          ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 4,
+                            title: LanguageKey.packages.tr,
+                          ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 3,
+                            title: LanguageKey.workingHours.tr,
+                          ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 2,
+                            title: LanguageKey.gallery.tr,
+                          ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 1,
+                            title: LanguageKey.reviews.tr,
+                          ),
+                        ]
                             : [
-                                tabBarItem(
-                                  selected: controller.tabBarIndex == 0,
-                                  title: LanguageKey.aboutUs.tr,
-                                ),
-                                if (controller.activity.services.isNotEmpty)
-                                  tabBarItem(
-                                    selected: controller.tabBarIndex == 1,
-                                    title: LanguageKey.services.tr,
-                                  ),
-                                if (controller.activity.images.isNotEmpty)
-                                  tabBarItem(
-                                    selected: controller.tabBarIndex ==
-                                        controller.tabController!.length - 2,
-                                    title: LanguageKey.gallery.tr,
-                                  ),
-                                tabBarItem(
-                                  selected: controller.tabBarIndex ==
-                                      controller.tabController!.length - 1,
-                                  title: LanguageKey.reviews.tr,
-                                ),
-                              ],
+                          tabBarItem(
+                            selected: controller.tabBarIndex == 0,
+                            title: LanguageKey.aboutUs.tr,
+                          ),
+                          if (controller.activity.services.isNotEmpty)
+                            tabBarItem(
+                              selected: controller.tabBarIndex == 1,
+                              title: LanguageKey.services.tr,
+                            ),
+                          if (controller.activity.images.isNotEmpty)
+                            tabBarItem(
+                              selected: controller.tabBarIndex ==
+                                  controller.tabController!.length - 2,
+                              title: LanguageKey.gallery.tr,
+                            ),
+                          tabBarItem(
+                            selected: controller.tabBarIndex ==
+                                controller.tabController!.length - 1,
+                            title: LanguageKey.reviews.tr,
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
@@ -313,38 +313,38 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                         physics: const NeverScrollableScrollPhysics(),
                         controller: controller.tabController!,
                         children: DataHelper.user?.browsingType ==
-                                AccountType.manager
+                            AccountType.manager
                             ? [
-                                AboutUsWidget(
-                                  description: controller.activity.description,
-                                  workTimes: controller.activity.workTimes,
-                                ),
-                                ServicesWidget(
-                                  services: controller.activity.services,
-                                ),
-                                PackagesWidget(
-                                  packages: controller.activity.packages,
-                                ),
-                                WorkingHoursWidget(
-                                  workTimes: controller.activity.workTimes,
-                                ),
-                                GalleryWidget(
-                                    images: controller.activity.images),
-                                const ReviewsWidget(),
-                              ]
+                          AboutUsWidget(
+                            description: controller.activity.description,
+                            workTimes: controller.activity.workTimes,
+                          ),
+                          ServicesWidget(
+                            services: controller.activity.services,
+                          ),
+                          PackagesWidget(
+                            packages: controller.activity.packages,
+                          ),
+                          WorkingHoursWidget(
+                            workTimes: controller.activity.workTimes,
+                          ),
+                          GalleryWidget(
+                              images: controller.activity.images),
+                          const ReviewsWidget(),
+                        ]
                             : [
-                                AboutUsWidget(
-                                  description: controller.activity.description,
-                                  workTimes: controller.activity.workTimes,
-                                ),
-                                if (controller.activity.services.isNotEmpty)
-                                  ServicesWidget(
-                                      services: controller.activity.services),
-                                if (controller.activity.images.isNotEmpty)
-                                  GalleryWidget(
-                                      images: controller.activity.images),
-                                const ReviewsWidget(),
-                              ],
+                          AboutUsWidget(
+                            description: controller.activity.description,
+                            workTimes: controller.activity.workTimes,
+                          ),
+                          if (controller.activity.services.isNotEmpty)
+                            ServicesWidget(
+                                services: controller.activity.services),
+                          if (controller.activity.images.isNotEmpty)
+                            GalleryWidget(
+                                images: controller.activity.images),
+                          const ReviewsWidget(),
+                        ],
                       ),
                     )
                   ],
