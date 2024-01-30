@@ -127,7 +127,7 @@ class PhoneValidator extends Validator<dynamic> {
   Map<String, dynamic>? validate(AbstractControl<dynamic> control) {
     return control.value == null ||
             control.value == "" ||
-            phoneRegExp.hasMatch(control.value)
+            true
         ? null
         : {'phone': true};
   }

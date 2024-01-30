@@ -311,7 +311,7 @@ class BookingsView extends GetView<BookingsController> {
                                                     );
                                                   },
                                                   child: Text(LanguageKey
-                                                      .viewSummary.tr),
+                                                      .viewSummary.tr,style: TextStyle(color: AppColors.primary),),
                                                 ),
                                               ),
                                             ),

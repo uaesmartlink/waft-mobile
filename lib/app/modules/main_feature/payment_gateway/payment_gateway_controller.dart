@@ -31,8 +31,16 @@ class PaymentGatewayController extends GetxStateController {
             error = false;
             logger(change.url.toString(), name: "onUrlChange");
             update(["WebViewWidget"]);
+            String path = "https://waft.ae/bookingResult";
+
+            print("==========Change==============");
+            print(change.url);
+            // print(change.url != null && change.url!.contains(path));
+            print("==============================");
+
             if (change.url != null &&
-                change.url!.contains("https://ae.waft.user/bookingResult")) {
+                change.url!.contains(path)) {
+              print("##################");
               Get.offAndToNamed(
                 HomeRoutes.bookingResultRoute,
                 arguments: {

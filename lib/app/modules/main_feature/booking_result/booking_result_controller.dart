@@ -25,13 +25,17 @@ class BookingResultController extends GetxStateController {
   }
 
   Future<void> paymentCallback() async {
+    print("-------------------------");
+    print("CallBack");
+    print("-------------------------");
     requestMethod(
       ids: ["BookingResultView"],
       requestType: RequestType.getData,
       function: () async {
         Uri url = Uri.parse(paymentResultUrl);
         String bookingId = url.queryParameters['bookingId'] ?? "";
-        String id = url.queryParameters['tap_id'] ?? "";
+        String id = url.queryParameters['ref'] ?? "";
+
         paymentResult = await activitiesRepository.paymentCallback(
           id: id,
           bookingId: int.parse(bookingId),

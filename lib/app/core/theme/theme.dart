@@ -66,7 +66,7 @@ class CustomTheme {
         ),
       ),
       colorScheme: const ColorScheme.light(
-        primary: AppColors.primary,
+        primary: AppColors.background,
         secondary: AppColors.secondry,
         background: AppColors.background,
       ).copyWith(background: AppColors.background),

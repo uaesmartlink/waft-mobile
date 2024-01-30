@@ -139,6 +139,7 @@ class ActivitiesRepository extends RepositoryInterface {
           "date": DateFormat("yyyy-MM-dd", "en").format(date),
         },
       );
+
       return AvailableTime.availableTimes(response.data);
     } catch (error) {
       throw ExceptionHandler(error);
@@ -228,17 +229,18 @@ class ActivitiesRepository extends RepositoryInterface {
     required DateTime startTime,
   }) async {
     try {
+      var data = {
+        "stadium_id": stadiumId,
+        "package_id": package.id,
+        "user_id": userId,
+        "start_time": startTime.toIso8601String(),
+        "end_time": startTime.add(Duration(minutes: package.slot)).toIso8601String(),
+        "type": package.getPackageTypeString,
+      };
+      print(data);
       Response response = await dio.post(
         RequestRoutes.bookings,
-        data: {
-          "stadium_id": stadiumId,
-          "package_id": package.id,
-          "user_id": userId,
-          "start_time": startTime.toIso8601String(),
-          "end_time":
-              startTime.add(Duration(minutes: package.slot)).toIso8601String(),
-          "type": package.getPackageTypeString,
-        },
+        data: data,
       );
       return await paymentCharge(bookingId: response.data["id"]);
     } catch (error) {
@@ -248,17 +250,22 @@ class ActivitiesRepository extends RepositoryInterface {
 
   Future<String> paymentCharge({required int bookingId}) async {
     try {
+      print("========BOOKINGID===========");
+      print(bookingId);
+      print("========BOOKINGID===========");
+
       Response response = await dio.post(
         RequestRoutes.paymentCharge,
         data: {
           "booking_id": bookingId,
-          "currency": "AED",
-          "description": "Test Description",
-          "metadata": {"udf1": "Metadata 1"},
-          "reference": {"transaction": "txn_01", "order": "ord_01"}
+
         },
       );
-      return response.data["data"]["transaction"]["url"];
+      print("========BOOKING-URL===========");
+      print(response.data['url']);
+      print("========BOOKING-URL===========");
+
+      return response.data['url'];
     } catch (error) {
       throw ExceptionHandler(error);
     }
@@ -291,11 +298,21 @@ class ActivitiesRepository extends RepositoryInterface {
 
   Future<void> cancelBooking({required int bookingId}) async {
     try {
-      await dio.post(
+      print('==========Data=============');
+
+      print(bookingId);
+      Response response = await dio.post(
         "/booking/$bookingId/cancel",
         data: {"reason": ""},
       );
+      print('bookingId: $bookingId');
+      print('==========Response=============');
+      print(response);
+      print('===============================');
     } catch (error) {
+      print('==========Error==================');
+      print(error);
+      print('=================================');
       throw ExceptionHandler(error);
     }
   }
@@ -325,6 +342,7 @@ class ActivitiesRepository extends RepositoryInterface {
     required int bookingId,
   }) async {
     try {
+
       Response response = await dio.post(
         RequestRoutes.paymentCallback,
         data: {
@@ -336,7 +354,12 @@ class ActivitiesRepository extends RepositoryInterface {
         },
         queryParameters: {"id": id},
       );
-      return response.data["data"]["status"] == "CAPTURED";
+      print("===========Response=============");
+      print(id);
+      print(bookingId);
+      print(response);
+      print("================================");
+      return response.data["data"] == "CAPTURED";
     } catch (error) {
       throw ExceptionHandler(error);
     }
