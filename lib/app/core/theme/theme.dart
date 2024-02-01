@@ -42,10 +42,16 @@ class CustomTheme {
             fontFamily: "JA",
             fontSizeFactor: 1.0,
           ),
+      colorScheme: const ColorScheme.light(
+        primary: AppColors.primary,
+        secondary: AppColors.secondry,
+        background: AppColors.background,
+      ).copyWith(background: AppColors.background),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primary,
             textStyle: const TextStyle(color: AppColors.background),
+            foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30))),
       ),
@@ -65,11 +71,7 @@ class CustomTheme {
           borderSide: BorderSide.none,
         ),
       ),
-      colorScheme: const ColorScheme.light(
-        primary: AppColors.background,
-        secondary: AppColors.secondry,
-        background: AppColors.background,
-      ).copyWith(background: AppColors.background),
+
     );
   }
 }

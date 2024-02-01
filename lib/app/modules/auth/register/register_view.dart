@@ -131,6 +131,7 @@ class _RegisterViewState extends State<RegisterView> {
                       child: const Icon(
                         Icons.navigate_next_rounded,
                         size: 50,
+                        color: Colors.white,
                       ),
                     ),
                   )

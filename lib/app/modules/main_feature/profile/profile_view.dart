@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -201,7 +203,7 @@ class ProfileView extends GetView<ProfileController> {
                           onPressed: () {
                             Get.toNamed(AuthRoutes.loginRoute);
                           },
-                          child: Text(LanguageKey.signIn.tr),
+                          child: Text(LanguageKey.signIn.tr,style: TextStyle(color: Colors.white),),
                         ),
                       ),
                     ),

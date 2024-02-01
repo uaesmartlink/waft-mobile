@@ -50,7 +50,7 @@ class _MainWidgetState extends State<MainWidget> {
       fallbackLocale: const Locale("en"),
       initialBinding: AppInitialBindings(),
       locale: Locale(languageCode),
-      debugShowCheckedModeBanner: appMode != AppMode.release,
+      debugShowCheckedModeBanner: false,
       enableLog: appMode != AppMode.release,
       theme: CustomTheme.lightTheme(context),
       builder: (context, child) {
