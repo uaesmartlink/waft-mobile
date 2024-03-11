@@ -1,7 +1,7 @@
 name: sport
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.0.11+11
+version: 2.2.0
 
 environment:
   sdk: '>=3.0.2 <4.0.0'

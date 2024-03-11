@@ -220,14 +220,14 @@ class ActivityDetailsView extends GetView<ActivityDetailsController> {
                                     );
                                   },
                                 ),
-                                actionItem(
-                                  icon: Icons.share,
-                                  title: LanguageKey.share.tr,
-                                  onTap: () {
-                                    Share.share(
-                                        'https://ae.waft.user/activityDetails?activityId=${controller.activity.id}');
-                                  },
-                                ),
+                                // actionItem(
+                                //   icon: Icons.share,
+                                //   title: LanguageKey.share.tr,
+                                //   onTap: () {
+                                //     Share.share(
+                                //         'https://ae.waft.user/activityDetails?activityId=${controller.activity.id}');
+                                //   },
+                                // ),
                               ],
                             ),
                             const SizedBox(height: 10),
